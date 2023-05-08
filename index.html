@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/rs.jpg" />
+
+    <title>Renuka Schreck &mdash; About Me</title>
+    <script src="./jquery.min.js" type="text/javascript"></script>
+    <script src="./js-functions.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="icon-rotate logo" src="img/rs.jpg" alt="RS logo" />
+        <nav class="user-nav">
+          <div class="user-nav__user">
+            <img
+              src="img/renuka-2.jpg"
+              alt="user"
+              class="user-nav__user-photo"
+            />
+            <span>R Schreck</span>
+          </div>
+        </nav>
+      </header>
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="side_nav">
+            <li class="side-nav__item" id="home">
+              <a href="#" class="side-nav__link" onclick="makeItActive('home')">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                  <span>About Me</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="experience">
+              <a
+                href="experience.html"
+                class="side-nav__link"
+                onclick="makeItActive('experience')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                  <span>Experience</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="education">
+              <a
+                href="education.html"
+                class="side-nav__link"
+                onclick="makeItActive('education')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-key"></use>
+                  <span>Education</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="references">
+              <a
+                href="references.html"
+                class="side-nav__link"
+                onclick="makeItActive('references')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                  <span>References</span>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy:2023</div>
+        </nav>
+        <main class="hotel-view">
+          <div class="overview">
+            <h1 class="overview__heading">Renuka Schreck</h1>
+            <div class="overview__stars">
+              <h3>Full Stack Developer</h3>
+              <svg class="overview__icon-star">
+                <h3>641-919-5380</h3>
+              </svg>
+              <svg class="overview__icon-copy">
+                <h3 id="emailid">schrer3@gmail.com</h3>
+              </svg>
+              <button
+                class="overview__icon-copy"
+                onclick="navigator.clipboard.writeText('schrer3@gmail.com')"
+              >
+                <svg class="overview__icon-copy" aria-labelledby="circle">
+                  <title id="unique-id">Copy To Clipboard</title>
+                  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>
+                </svg>
+              </button>
+
+              <svg class="overview__icon-star">
+                <h3>US Citizen</h3>
+              </svg>
+            </div>
+            <div class="overview__location">
+              <svg class="overview__icon-location">
+                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+              </svg>
+              <button class="btn-inline">Austin, TX</button>
+            </div>
+            <div class="overview__rating">
+              <div class="overview__rating-average">15+ years</div>
+            </div>
+          </div>
+          <div>
+            <div class="detail">
+              <figure class="detail gallery__photo">
+                <img
+                  src="img/renuka-2.jpg"
+                  alt="Photo"
+                  class="gallery__photo"
+                />
+              </figure>
+              <div class="description">
+                <p class="paragraph">
+                  👋 I am Renuka Schreck, software developer and a meta-fit
+                  instructor 💪. I am Interested in a challenging position as a
+                  JavaScript full-stack developer.
+                </p>
+                <p class="paragraph">
+                  I was born in Jabalpur, India. I have 5 older sisters. After
+                  graduating High School, I went to Nutan college for Bachelor's
+                  degree in Math and then went to MANIT for MCA (Master's In
+                  Computer Application). I move to US in 2000 and instead of
+                  going to University again, I decided to focus Certifications
+                  and passed two Microsoft certifications.
+                </p>
+                <p class="paragraph">
+                  My keen interest in programming and design helps me find
+                  creative solutions to technical challenges from back-end to
+                  front-end and develop solutions. I am writing code for more
+                  than 2 decades.
+                </p>
+                <p class="paragraph">
+                  I live in Austin, TX 🏠 with my hubby Dan and Charlie the 🐕.
+                  Our daughter Reva is studying electrical engineering from
+                  UTSA.
+                </p>
+                <p class="paragraph">
+                  I used to be a Microsoft full-stack developer with expertise
+                  in C#, ASP.NET, MVC, WPF most of my professional life but four
+                  years back, I learned JavaScript, TypeScript, React, Node,
+                  GraphQL, AWS and now very comfortable as JS/TS full-stack
+                  developer. I have also done a small course on Python.
+                </p>
+                <div class="intro__link">
+                  <a
+                    href="https://www.linkedin.com/in/renukaschreck/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                  <a href="https://github.com/rschreck/" target="_blank"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://www.facebook.com/renuka.schreck/"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                  <a href="./Renuka-Resume.pdf" target="_blank">Resume</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="description" id="description">
+              <!-- <p class="paragraph">I was born in Jabalpur, India.</p>
+              <p class="paragraph">
+                After graduating High School, I went to Nutan college for
+                Bachelor's degree in Math and then went to <b>MANIT</b> for MCA
+                (Master's In Computer Application).
+              </p>
+              <p class="paragraph">
+                Accusantium cumque, quas, ut corporis incidunt deserunt quae
+                architecto voluptate delectus, inventore iure aliquid aliquam.
+              </p>-->
+              <p class="paragraph">
+                <b
+                  >Some highlighted skills I have been using in last few
+                  years.</b
+                >
+              </p>
+              <ul class="list">
+                <li class="list__item">TypeScript, JavaScript</li>
+                <li class="list__item">React, Node, GraphQL</li>
+                <li class="list__item">HTML, CSS, SASS</li>
+                <li class="list__item">SQL, Oracle, Postgres, MongoDB</li>
+                <li class="list__item">C#, ASP.Net, VB.Net</li>
+                <li class="list__item">AWS S3, Lambda, CDK, Incognito</li>
+                <li class="list__item">Unit Testing, Jest, Chromatic</li>
+                <li class="list__item">JIRA, Confluence, ShortCut</li>
+                <li class="list__item">GitHub, Cli, TFS. SVN</li>
+                <li class="list__item">DevOps with CircleCI</li>
+                <li class="list__item">Design documents, PR feedback</li>
+                <li class="list__item">Mentoring Junior Developers</li>
+              </ul>
+            </div>
+
+            <div class="user-reviews">
+              <div class="personal">
+                <p>
+                  11 years back, I started simple exercises like Zumba, then I
+                  started doing meta-fit (HITT). Later I became meta-fit
+                  instructor. Last year, I ran my first half-marathon.
+                </p>
+              </div>
+              <div class="personal">
+                <p>
+                  I am a vegetarian who loves to cook. I also love my 🍷. I also
+                  enjoy long walks with my hubby.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      function makeItActive(myDIV) {
+        var els = document.getElementsByClassName("side-nav__item");
+        Array.from(els).forEach((el) => {
+          el.classList.remove("activate-menu");
+        });
+        var element = document.getElementById(myDIV);
+        element.classList.add("activate-menu");
+      }
+      $(document).ready(function () {
+        var element = document.getElementById("home");
+        element.classList.add("activate-menu");
+      });
+    </script>
+  </body>
+</html>
