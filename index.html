@@ -17,19 +17,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <img class="icon-rotate logo" src="img/rs.jpg" alt="RS logo" />
-        <nav class="user-nav">
-          <div class="user-nav__user">
-            <img
-              src="img/renuka-2.jpg"
-              alt="user"
-              class="user-nav__user-photo"
-            />
-            <span>R Schreck</span>
-          </div>
-        </nav>
-      </header>
+      <div id="header"></div>
       <div class="content">
         <nav class="sidebar">
           <ul class="side_nav">
@@ -80,7 +68,7 @@
           </ul>
           <div class="legal">&copy:2023</div>
         </nav>
-        <main class="hotel-view">
+        <main class="main-view">
           <div class="overview">
             <h1 class="overview__heading">Renuka Schreck</h1>
             <div class="overview__stars">
@@ -111,8 +99,8 @@
               </svg>
               <button class="btn-inline">Austin, TX</button>
             </div>
-            <div class="overview__rating">
-              <div class="overview__rating-average">15+ years</div>
+            <div class="overview__experience">
+              <div class="overview__experience-years">15+ years</div>
             </div>
           </div>
           <div>
@@ -177,16 +165,6 @@
           </div>
           <div class="detail">
             <div class="description" id="description">
-              <!-- <p class="paragraph">I was born in Jabalpur, India.</p>
-              <p class="paragraph">
-                After graduating High School, I went to Nutan college for
-                Bachelor's degree in Math and then went to <b>MANIT</b> for MCA
-                (Master's In Computer Application).
-              </p>
-              <p class="paragraph">
-                Accusantium cumque, quas, ut corporis incidunt deserunt quae
-                architecto voluptate delectus, inventore iure aliquid aliquam.
-              </p>-->
               <p class="paragraph">
                 <b
                   >Some highlighted skills I have been using in last few
@@ -240,7 +218,11 @@
       $(document).ready(function () {
         var element = document.getElementById("home");
         element.classList.add("activate-menu");
+        $("#header").load("header.html");
       });
+      // $(document).ready(function () {
+      //   $("#overview").load("overview.html");
+      // });
     </script>
   </body>
 </html>

@@ -15,19 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <img class="icon-rotate logo" src="img/rs.jpg" alt="RS logo" />
-        <nav class="user-nav">
-          <div class="user-nav__user">
-            <img
-              src="img/renuka-2.jpg"
-              alt="user"
-              class="user-nav__user-photo"
-            />
-            <span>R Schreck</span>
-          </div>
-        </nav>
-      </header>
+      <div id="header"></div>
       <div class="content">
         <nav class="sidebar">
           <ul class="side_nav">
@@ -82,7 +70,7 @@
           </ul>
           <div class="legal">&copy:2023</div>
         </nav>
-        <main class="hotel-view">
+        <main class="main-view">
           <div class="overview">
             <h1 class="overview__heading">Renuka Schreck</h1>
             <div class="overview__stars">
@@ -113,8 +101,8 @@
               </svg>
               <button class="btn-inline">Austin, TX</button>
             </div>
-            <div class="overview__rating">
-              <div class="overview__rating-average">15+ years</div>
+            <div class="overview__experience">
+              <div class="overview__experience-years">15+ years</div>
             </div>
           </div>
           <div class="experience" id="experience">
@@ -135,7 +123,7 @@
                   <figcaption class="review__user">
                      
                       <div class="review__user-box">
-                          <p class="review__rating">Joseph Norman</p>
+                          <p class="review__experience">Joseph Norman</p>
                           <p class="review__user-name">SWE at Capital One</p>
                       </div>
                       <div class="review__user-name">Feb 15, 2022</div>
@@ -153,7 +141,7 @@
                     <figcaption class="review__user">
                        
                         <div class="review__user-box">
-                            <p class="review__rating">Vaibhav Agarwal</p>
+                            <p class="review__experience">Vaibhav Agarwal</p>
                             <p class="review__user-name">SDE at Workday</p>
                         </div>
                         <div class="review__user-name">Feb 6, 2022</div>
@@ -176,7 +164,7 @@
                 <figcaption class="review__user">
                    
                     <div class="review__user-box">
-                        <p class="review__rating">Rishabh Nayak</p>
+                        <p class="review__experience">Rishabh Nayak</p>
                         <p class="review__user-name">Software Engineer at Google</p>
                     </div>
                     <div class="review__user-name">Feb 6, 2022</div>
@@ -192,7 +180,7 @@
               <figcaption class="review__user">
                  
                   <div class="review__user-box">
-                      <p class="review__rating">Chris J. Gehlhausen</p>
+                      <p class="review__experience">Chris J. Gehlhausen</p>
                       <p class="review__user-name">Supervisor at Panasonic Energy</p>
                   </div>
                   <div class="review__user-name">Jan 6, 2021</div>
@@ -208,7 +196,7 @@
             <figcaption class="review__user">
                
                 <div class="review__user-box">
-                    <p class="review__rating">Anthony Syvarth</p>
+                    <p class="review__experience">Anthony Syvarth</p>
                     <p class="review__user-name">Manager at Samsung</p>
                 </div>
                 <div class="review__user-name">Feb 6, 2022</div>
@@ -229,7 +217,7 @@
           <figcaption class="review__user">
              
               <div class="review__user-box">
-                  <p class="review__rating">Dario Delgado</p>
+                  <p class="review__experience">Dario Delgado</p>
                   <p class="review__user-name">Manager at Xerox</p>
               </div>
               <div class="review__user-name">Aug 24, 2016</div>
@@ -246,7 +234,7 @@
         <figcaption class="review__user">
            
             <div class="review__user-box">
-                <p class="review__rating">Gennady Mamzhi</p>
+                <p class="review__experience">Gennady Mamzhi</p>
                 <p class="review__user-name">Team Lead at Xerox</p>
             </div>
             <div class="review__user-name">Aug 18, 2016</div>
@@ -270,6 +258,7 @@
       $(document).ready(function () {
         var element = document.getElementById("references");
         element.classList.add("activate-menu");
+        $("#header").load("header.html");
       });
     </script>
   </body>
