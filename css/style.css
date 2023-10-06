@@ -132,7 +132,7 @@ body {
     align-items: center;
     justify-content: space-evenly; }
 
-.user-reviews {
+.my-personality {
   flex: 1;
   display: flex;
   flex-direction: column;
