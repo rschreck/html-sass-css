@@ -16,7 +16,7 @@
 .experience {
   font-size: 1.4rem;
   padding: 2.5rem;
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-white);
   border-bottom: var(--line);
 
   &__heading {
@@ -43,13 +43,11 @@
     align-items: center;
     margin-bottom: 2rem;
   }
-  &__card__project {
-  }
 }
 
 //Education
 .education {
-  background-color: var(--color-grey-light-1);
+  background-color: var(color-white);
   font-size: 1.4rem;
   padding: 2.5rem;
   border-bottom: var(--line);
