@@ -104,126 +104,52 @@
             </div>
           </div>
           <div class="education" id="education">
-            <div class="education__heading">
-              <h4>Education</h4>
-            </div>
             <div class="education__card">
-              <div class="education__card__heading">
-                <h4 class="education__card__heading-position">
-                  Master's in Computer Applications
-                </h4>
-                <h4 class="education__card__heading-company">
-                  MANIT – Regional Engineering College, Bhopal, India
-                </h4>
-                <h4 class="education__card__heading-period">
-                  Aug 1994 - Jun 1997
-                </h4>
-              </div>
-            </div>
-            <div class="education__card">
-              <div class="education__card__heading">
-                <h4 class="education__card__heading-position">
-                  Bachelor's in Math
-                </h4>
-                <h4 class="education__card__heading-company">
-                  Nutan College, Bhopal, India
-                </h4>
-                <h4 class="education__card__heading-period">
-                  Aug 1991 - Jul 1994
-                </h4>
-              </div>
+            <div  id="myEducation"></div>
             </div>
             </div>
             <div class="education" id="education">
-              <div class="education__heading">
-                <h4>Certifications</h4>
-              </div>
               <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    Microsoft Certified professional
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2001
-                  </h4>
+                <div id="myCertifications"></div>
                 </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    IBM FileNet Administration and Maintenance Certification
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2015
-                  </h4>
                 </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                   MVC Certification
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2017
-                  </h4>
                 </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                   Python Essentials
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2018
-                  </h4>
-                </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    Udemy, Node.Js Unit Testing In Depth
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2010
-                  </h4>
-                </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    Epic React.IO, Advanced React Hooks 
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2019
-                  </h4>
-                </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    Udemy, Advanced CSS, FlexBox
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2022
-                  </h4>
-                </div>
-              </div>
-              <div class="education__card">
-                <div class="education__card__heading">
-                  <h4 class="education__card__heading-position">
-                    Udemy, AWS Lambda and Serverless
-                  </h4>
-                  <h4 class="education__card__heading-position">
-                    2023
-                  </h4>
-                </div>
-              </div>
-              </div>
           </div>
         </main>
       </div>
     </div>
     <script>
+       fetch('education.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+    
+    function appendData(data) {
+        let myEducation = document.getElementById("myEducation");
+        let myCertifications = document.getElementById("myCertifications");
+        $(myCertifications).append('<div class="education__heading">Certifications</div>');
+        $(myEducation).append('<div class="education__heading">Education</div>');
+
+        data.education.forEach(function(item) {
+       var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.degree + '</h4>'
+       + '<h4 class="education__card__heading-company">' + item.institute + '</h4>'
+       + '<h4 class="education__card__heading-period">' + item.period + '</h4>'+ '</div>');
+      $(myEducation).append(element);
+});
+
+data.certifications.forEach(function(item) {
+  var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.certificate + '</h4>'
+    + '<h4 class="education__card__heading-company">' + item.period + '</h4>'+ '</div>');
+    $(myCertifications).append(element);
+});
+
+  }
       function makeItActive(myDIV) {
         var els = document.getElementsByClassName("side-nav__item");
         Array.from(els).forEach((el) => {
@@ -237,6 +163,7 @@
         element.classList.add("activate-menu");
         $("#header").load("header.html");
       });
+    
     </script>
   </body>
 </html>
