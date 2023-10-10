@@ -1,0 +1,89 @@
+{
+  "experience": [
+    {
+      "position": "Senior Software Engineer",
+      "company": "Homebound",
+      "period": "Jan 2022 - Apr 2023",
+      "skills": [
+        "TypeScript, JavaScript",
+        "React, Node, GraphQL",
+        "HTML, CSS, SASS",
+        "SQL, Oracle, Postgres, MongoDB",
+        "AWS S3, Lambda, CDK, Incognito",
+        "Unit Testing, Jest, Chromatic",
+        "JIRA, Confluence, ShortCut",
+        "GitHub, Cli, TFS. SVN",
+        "DevOps with CircleCI",
+        "Design documents, PR feedback",
+        "Mentoring Junior Developers"
+      ],
+      "project": [
+        {
+          "name": "BluePrint and GraphQL Services",
+          "description": "BluePrint and GraphQL Services Worked in an agile team with developers, designers and product managers utilizing shortcut and confluence. Our team has focussed on builder efficiency parts such as Job Logs, To Do Kanban board and schedules (integrate Bryntum). This website is written in React, Truss with TypeScript and the backend API was pure Typescript. Used CircleCI for deployments. Review/Add engineering designs for new features, PR feedback and to team members. Every PR must have clean code, unit tests and a chromatic story."
+        }
+      ]
+    },
+    {
+      "position": "Senior Engineer",
+      "company": "Samsung Austin Semiconductors",
+      "period": "Sept 2016 - Dec 2021",
+      "skills": [
+        "JavaScript, React, Node, Bootstrap",
+        "C#, Razar, MVC, WPF, jQuery",
+        "SQL, Oracle, MongoDB, SSRS",
+        "GitLab, SVN, TFS",
+        "Confluence, JIRA",
+        "Mentoring Junior Developers"
+      ],
+      "project": [
+        {
+          "name": "Vendor Scorecard Web app",
+          "description": "Created a website from the scratch using MVC C#, Entity Framework, Razor, Ajax, jQuery and Bootstrap. This website is used by more than 500 people and is used to measure the performance and effectiveness of vendors."
+        },
+        {
+          "name": "Cash Flow",
+          "description": "Designed MVC web application for entering order details using C# and Razor views. This increased visibility in the process by replacing Excel and print-outs. Created a desktop application in WinForms for logistics team enabling data entry, auditing, and reporting of purchase orders."
+        }
+      ]
+    },
+    {
+      "position": "Senior Engineer",
+      "company": "Xerox",
+      "period": "May 2007 - May 2016",
+      "skills": [
+        "MVVM, MVC",
+        "Silverlight, Razor",
+        "C#, ASP.Net, VB.Net",
+        "SQL, Oracle"
+      ],
+      "project": [
+        {
+          "name": "Xerox Transactional Content Management (XTCM)",
+          "description": "Customization of SunTrust's loan document management system XTCM, including web development with ASP.NET, jQuery, AJAX and JavaScript, with custom reports developed in SSRS."
+        },
+        {
+          "name": "FFEL Student Loans, Enterprise Mail Tracker",
+          "description": "Performed a major upgrade of a web application from classic ASP by creating a new Web Service in C# utilizing IBM Panagon. Team Lead responsible for creating program updates, validating scripts, applying updates to UAT, getting approvals from management, production updates and documentation. \\nCustomized a workflow application developed in Silverlight/MVVM with Telerik controls and reports developed in SSRS that is central to Citibank's South America mailroom management."
+        }
+      ]
+    },
+    {
+      "position": "Software Developer",
+      "company": "Peoplefluent",
+      "period": "May 2001 - Nov 2007",
+      "skills": [
+        "ASP.Net, VB.Net, C#",
+        "SSRS, Crystal Reports",
+        "HTML,jQuery, AJAX",
+        "SQL, Oracle"
+      ],
+      "project": [
+        {
+          "name": "BluePrint and GraphQL Services",
+          "description": "BluePrint and GraphQL Services Worked in an agile team with developers, designers and product managers utilizing shortcut and confluence. Our team has focussed on builder efficiency parts such as Job Logs, To Do Kanban board and schedules (integrate Bryntum). This website is written in React, Truss with TypeScript and the backend API was pure Typescript. Used CircleCI for deployments. Review/Add engineering designs for new features, PR feedback and to team members. Every PR must have clean code, unit tests and a chromatic story."
+        }
+      ]
+    }
+  ]
+}
