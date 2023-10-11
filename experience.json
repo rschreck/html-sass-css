@@ -57,7 +57,7 @@
         "C#, ASP.Net, VB.Net",
         "SQL, Oracle"
       ],
-      "project": [
+      "projects": [
         {
           "name": "Xerox Transactional Content Management (XTCM)",
           "description": "Customization of SunTrust's loan document management system XTCM, including web development with ASP.NET, jQuery, AJAX and JavaScript, with custom reports developed in SSRS."
@@ -78,7 +78,7 @@
         "HTML,jQuery, AJAX",
         "SQL, Oracle"
       ],
-      "project": [
+      "projects": [
         {
           "name": "BluePrint and GraphQL Services",
           "description": "BluePrint and GraphQL Services Worked in an agile team with developers, designers and product managers utilizing shortcut and confluence. Our team has focussed on builder efficiency parts such as Job Logs, To Do Kanban board and schedules (integrate Bryntum). This website is written in React, Truss with TypeScript and the backend API was pure Typescript. Used CircleCI for deployments. Review/Add engineering designs for new features, PR feedback and to team members. Every PR must have clean code, unit tests and a chromatic story."
