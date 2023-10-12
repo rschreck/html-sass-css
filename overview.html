@@ -1,7 +1,7 @@
 <html>
   <body>
     <div class="overview">
-      <div class="overview" id="myOverview"></div>
+      <div class="overview" id="myOverviewSection"></div>
     </div>
     <script>
       var overview;
@@ -21,9 +21,11 @@
         navigator.clipboard.writeText(overview.main.email);
       }
       function appendData(data) {
+        console.log("data");
+
         var item = data.main;
 
-        let myOverview = document.getElementById("myOverview");
+        let myOverview = document.getElementById("myOverviewSection");
         var element = $(
           '<h1 class="overview__heading">' +
             item.name +
@@ -57,9 +59,10 @@
             "</div>" +
             " </div>"
         );
-        // $(document).ready(function () {
-        //   document.title = item.name;
-        // });
+        $(myOverview).append(element);
+        $(document).ready(function () {
+          document.title = item.name;
+        });
       }
     </script>
   </body>
