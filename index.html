@@ -79,58 +79,6 @@
                 />
               </figure>
               <div id="myProfile"></div>
-              <!-- <div class="description">
-                <p class="paragraph">
-                  👋 I am Reva Kulkarni, software developer and a meta-fit
-                  instructor 💪. I am Interested in a challenging position as a
-                  JavaScript full-stack developer.
-                </p>
-                <p class="paragraph">
-                  I was born in Jabalpur, India. I have 5 older sisters. After
-                  graduating High School, I went to Nutan college for Bachelor's
-                  degree in Math and then went to MANIT for MCA (Master's In
-                  Computer Application). I move to US in 2000 and instead of
-                  going to University again, I decided to focus on
-                  Certifications and passed two Microsoft certifications.
-                </p>
-                <p class="paragraph">
-                  My keen interest in programming and design helps me find
-                  creative solutions to technical challenges from back-end to
-                  front-end and develop solutions. I am writing code for more
-                  than 2 decades.
-                </p>
-                <p class="paragraph">
-                  I live in Austin, TX 🏠 with my hubby Dan and Charlie the 🐕.
-                  Our daughter Reva is studying electrical engineering from
-                  UTSA.
-                </p>
-                <p class="paragraph">
-                  I <strong>used</strong> to be a Microsoft full-stack developer
-                  with expertise in C#, ASP.NET, MVC, WPF most of my
-                  professional life but few years back, I learned
-                  <strong
-                    >JavaScript, TypeScript, React, Node, GraphQL, AWS
-                  </strong>
-                  and now very comfortable as JS/TS full-stack developer. I have
-                  also done a small course on Python.
-                </p>
-                <div class="intro__link">
-                  <a
-                    href="https://www.linkedin.com/in/renukaschreck/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
-                  <a href="https://github.com/rschreck/" target="_blank"
-                    >GitHub</a
-                  >
-                  <a
-                    href="https://www.facebook.com/renuka.schreck/"
-                    target="_blank"
-                    >Facebook</a
-                  >
-                  <a href="./Renuka-Resume.pdf" target="_blank">Resume</a>
-                </div>
-              </div> -->
             </div>
           </div>
           <div class="detail">
@@ -141,38 +89,10 @@
                   years.</b
                 >
               </p>
-              <ul class="list">
-                <li class="list__item">TypeScript, JavaScript</li>
-                <li class="list__item">React, Node, GraphQL</li>
-                <li class="list__item">HTML, CSS, SASS</li>
-                <li class="list__item">SQL, Oracle, Postgres, MongoDB</li>
-                <li class="list__item">C#, ASP.Net, VB.Net</li>
-                <li class="list__item">AWS S3, Lambda, CDK, Incognito</li>
-                <li class="list__item">Unit Testing, Jest, Chromatic</li>
-                <li class="list__item">JIRA, Confluence, ShortCut</li>
-                <li class="list__item">GitHub, Cli, TFS. SVN</li>
-                <li class="list__item">DevOps with CircleCI</li>
-                <li class="list__item">Design documents, PR feedback</li>
-                <li class="list__item">Mentoring Junior Developers</li>
-              </ul>
+              <div id="mySkills"></div>
             </div>
-            <div id="sideintro"></div>
             <div class="my-personality">
-              <div class="personal">
-                <p>
-                  11 years back, I started simple exercises like Zumba, then I
-                  started doing meta-fit (HITT). Later I became meta-fit
-                  instructor. Last year, I ran my first half-marathon.
-                </p>
-              </div>
-              <div class="personal">
-                <p>
-                  I am a vegetarian who loves to cook. I also love my 🍷. I also
-                  enjoy long walks with my hubby.
-                </p>
-              </div>
-            </div>
-          </div>
+            <div id="mySideIntro"></div></div>
         </main>
       </div>
     </div>
@@ -189,19 +109,52 @@
         });
       function appendData(data) {
         let myProfile = document.getElementById("myProfile");
-        let sideintro = document.getElementById("sideintro");
-        console.log(data);
+        let mySkills = document.getElementById("mySkills");
+        let mySideIntro = document.getElementById("mySideIntro");
         var element = $(
           '<div class="description">' +
-            +data.main.intro
+            data.main.intros
               .map((intro) => {
-                console.log(intro);
-                return +'<p class="paragraph">' + intro + +"</p>";
+                return '<p class="paragraph">' + intro + "</p>";
               })
               .join(" ") +
+            '<div class="intro__link">' +
+            data.main.websites
+              .map((website) => {
+                return (
+                  "<a href=" +
+                  website.url +
+                  " target='_blank'>" +
+                  website.name +
+                  "</a>"
+                );
+              })
+              .join(" ") +
+            "</div>" +
             "</div>"
         );
         $(myProfile).append(element);
+        var skills = $(
+          '<ul class="list">' +
+            data.main.skills
+              .map((skill) => {
+                return '<li class="list__item">' + skill + "</li>";
+              })
+              .join("") +
+            "</ul>" //+
+          // "</div>"
+        );
+        $(mySkills).append(skills);
+        var sideIntro = $(
+          '<div class="my-personality">' +
+            data.main.sideIntros
+              .map((si) => {
+                return '<p class="personal">' + si + "</p>";
+              })
+              .join("") +
+            "</div>"
+        );
+        $(mySideIntro).append(sideIntro);
       }
       function makeItActive(myDIV) {
         var els = document.getElementsByClassName("side-nav__item");
