@@ -57,7 +57,9 @@
             "</div>" +
             " </div>"
         );
-        $(myOverview).append(element);
+        $(document).ready(function () {
+          document.title = item.name;
+        });
       }
     </script>
   </body>
