@@ -70,10 +70,7 @@
           <div class="legal">&copy RSchreck:2023</div>
         </nav>
         <main class="main-view">
-          <!-- <div class="overview"> -->
-            <div id="overview"></div>
-
-          <!-- </div> -->
+            <div id="overviewSection"></div>
            <div class="education" id="education">
             <div class="education__card">
             <div  id="myEducation"></div>
@@ -125,7 +122,7 @@ data.certifications.forEach(function(item) {
         var element = document.getElementById("education");
         element.classList.add("activate-menu");
         $("#header").load("header.html");
-        $("#overview").load("overview.html");
+        $("#overviewSection").load("overview.html");
       });
     
     </script>

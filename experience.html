@@ -71,39 +71,7 @@
           <div class="legal">&copy RSchreck:2023</div>
         </nav>
         <main class="main-view">
-          <div class="overview">
-            <h1 class="overview__heading">Reva Kulkarni</h1>
-            <div class="overview__stars">
-              <h3>Electrical Engineer</h3>
-              <svg class="overview__icon-star">
-                <h3>512-565-908</h3>
-              </svg>
-              <svg class="overview__icon-copy">
-                <h3 id="emailid">schrer3@gmail.com</h3>
-              </svg>
-              <button
-                class="overview__icon-copy"
-                onclick="navigator.clipboard.writeText('schrer3@gmail.com')"
-              >
-                <svg class="overview__icon-copy" aria-labelledby="circle">
-                  <title id="unique-id">Copy To Clipboard</title>
-                  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>
-                </svg>
-              </button>
-              <svg class="overview__icon-star">
-                <h3>US Citizen</h3>
-              </svg>
-            </div>
-            <div class="overview__location">
-              <svg class="overview__icon-location">
-                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <button class="btn-inline">Austin, TX</button>
-            </div>
-            <div class="overview__experience">
-              <div class="overview__experience-years">15+ years</div>
-            </div>
-          </div>
+          <div id="overviewSection"></div>
           <div class="experience" id="experience">
             <div  id="myExperience"></div>
                </div>
@@ -156,6 +124,7 @@
         var element = document.getElementById("experience");
         element.classList.add("activate-menu");
         $("#header").load("header.html");
+        $("#overviewSection").load("overview.html");
       });
     </script>
   </body>

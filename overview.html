@@ -1,8 +1,6 @@
 <html>
   <body>
-    <div class="overview">
-      <div class="overview" id="myOverviewSection"></div>
-    </div>
+    <div id="myOverviewSection"></div>
     <script>
       var overview;
       fetch("index.json")
@@ -21,22 +19,22 @@
         navigator.clipboard.writeText(overview.main.email);
       }
       function appendData(data) {
-        console.log("data");
-
         var item = data.main;
-
         let myOverview = document.getElementById("myOverviewSection");
         var element = $(
-          '<h1 class="overview__heading">' +
+          '<div class="overview">' +
+            '<h1 class="overview__heading">' +
             item.name +
             "</h1>" +
             '<div class="overview__stars">' +
             "<h3>" +
             item.position +
             "</h3>" +
+            '<svg class="overview__icon-star"></svg>' +
             "<h3>" +
             item.phone +
             "</h3>" +
+            '<svg class="overview__icon-star"></svg>' +
             "<h3>" +
             item.email +
             "</h3>" +
@@ -46,16 +44,20 @@
             '  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>' +
             "</svg>" +
             "</button>" +
-            "<h3 class='overview__icon-star'>" +
+            '<svg class="overview__icon-star"></svg>' +
+            "<h3>" +
             item.extra +
             "</h3>" +
             "</div>" +
+            '<div class="overview__location">' +
             ' <button class="btn-inline">' +
             item.location +
             "</button>" +
+            "</div>" +
             '<div class="overview__experience">' +
             '<div class="overview__experience-years">' +
             item.yearsExperience +
+            "</div>" +
             "</div>" +
             " </div>"
         );
