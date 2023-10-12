@@ -67,39 +67,8 @@
           <div class="legal">&copy:2023</div>
         </nav>
         <main class="main-view">
-          <div class="overview">
-            <h1 class="overview__heading">Reva Kulkarni</h1>
-            <div class="overview__stars">
-              <h3>Electrical Engineer</h3>
-              <svg class="overview__icon-star">
-                <h3>512-565-908</h3>
-              </svg>
-              <svg class="overview__icon-copy">
-                <h3 id="emailid">schrer3@gmail.com</h3>
-              </svg>
-              <button
-                class="overview__icon-copy"
-                onclick="navigator.clipboard.writeText('schrer3@gmail.com')"
-              >
-                <svg class="overview__icon-copy" aria-labelledby="circle">
-                  <title id="unique-id">Copy To Clipboard</title>
-                  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>
-                </svg>
-              </button>
-              <svg class="overview__icon-star">
-                <h3>US Citizen</h3>
-              </svg>
-            </div>
-            <div class="overview__location">
-              <svg class="overview__icon-location">
-                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <button class="btn-inline">Austin, TX</button>
-            </div>
-            <div class="overview__experience">
-              <div class="overview__experience-years">15+ years</div>
-            </div>
-          </div>
+          <div id="overview"></div>
+
           <div>
             <div class="detail">
               <figure class="detail gallery__photo">
@@ -109,7 +78,8 @@
                   class="gallery__photo"
                 />
               </figure>
-              <div class="description">
+              <div id="myProfile"></div>
+              <!-- <div class="description">
                 <p class="paragraph">
                   👋 I am Reva Kulkarni, software developer and a meta-fit
                   instructor 💪. I am Interested in a challenging position as a
@@ -160,7 +130,7 @@
                   >
                   <a href="./Renuka-Resume.pdf" target="_blank">Resume</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="detail">
@@ -186,6 +156,7 @@
                 <li class="list__item">Mentoring Junior Developers</li>
               </ul>
             </div>
+            <div id="sideintro"></div>
             <div class="my-personality">
               <div class="personal">
                 <p>
@@ -206,6 +177,32 @@
       </div>
     </div>
     <script>
+      fetch("index.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          appendData(data);
+        })
+        .catch(function (err) {
+          console.log("error: " + err);
+        });
+      function appendData(data) {
+        let myProfile = document.getElementById("myProfile");
+        let sideintro = document.getElementById("sideintro");
+        console.log(data);
+        var element = $(
+          '<div class="description">' +
+            +data.main.intro
+              .map((intro) => {
+                console.log(intro);
+                return +'<p class="paragraph">' + intro + +"</p>";
+              })
+              .join(" ") +
+            "</div>"
+        );
+        $(myProfile).append(element);
+      }
       function makeItActive(myDIV) {
         var els = document.getElementsByClassName("side-nav__item");
         Array.from(els).forEach((el) => {
@@ -218,10 +215,8 @@
         var element = document.getElementById("home");
         element.classList.add("activate-menu");
         $("#header").load("header.html");
+        $("#overview").load("overview.html");
       });
-      // $(document).ready(function () {
-      //   $("#overview").load("overview.html");
-      // });
     </script>
   </body>
 </html>

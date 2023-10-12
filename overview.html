@@ -1,37 +1,64 @@
-<div class="overview">
-  <h1 class="overview__heading">Reva Kulkarni</h1>
-  <div class="overview__stars">
-    <h3>Electrical Engineer2</h3>
-    <svg class="overview__icon-star">
-      <h3>512-565-908</h3>
-    </svg>
+<html>
+  <body>
+    <div class="overview">
+      <div class="overview" id="myOverview"></div>
+    </div>
+    <script>
+      var overview;
+      fetch("index.json")
+        .then(function (response) {
+          return response.json();
+        })
 
-    <svg class="overview__icon-star">
-      <h3>US Citizen</h3>
-    </svg>
-    <svg class="overview__icon-copy">
-      <h3 id="emailid">schrer3@gmail.com2</h3>
-    </svg>
-    <button
-      class="overview__icon-copy"
-      onclick="navigator.clipboard.writeText('schrer3@gmail.com')"
-    >
-      <svg class="overview__icon-copy" aria-labelledby="circle">
-        <title id="unique-id">Copy To Clipboard</title>
-        <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>
-      </svg>
-    </button>
-    <svg class="overview__icon-star">
-      <h3>US Citizen</h3>
-    </svg>
-  </div>
-  <div class="overview__location">
-    <svg class="overview__icon-location">
-      <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-    </svg>
-    <button class="btn-inline">Austin, TX</button>
-  </div>
-  <div class="overview__experience">
-    <div class="overview__experience-years">15+ years</div>
-  </div>
-</div>
+        .then(function (data) {
+          overview = data;
+          appendData(data);
+        })
+        .catch(function (err) {
+          console.log("error: " + err);
+        });
+      function clickMe() {
+        navigator.clipboard.writeText(overview.main.email);
+      }
+      function appendData(data) {
+        var item = data.main;
+
+        let myOverview = document.getElementById("myOverview");
+        var element = $(
+          '<h1 class="overview__heading">' +
+            item.name +
+            "</h1>" +
+            '<div class="overview__stars">' +
+            "<h3>" +
+            item.position +
+            "</h3>" +
+            "<h3>" +
+            item.phone +
+            "</h3>" +
+            "<h3>" +
+            item.email +
+            "</h3>" +
+            '<button class="overview__icon-copy" onclick="clickMe()">' +
+            ' <svg class="overview__icon-copy" aria-labelledby="circle">' +
+            '  <title id="unique-id">Copy To Clipboard</title>' +
+            '  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>' +
+            "</svg>" +
+            "</button>" +
+            "<h3 class='overview__icon-star'>" +
+            item.extra +
+            "</h3>" +
+            "</div>" +
+            ' <button class="btn-inline">' +
+            item.location +
+            "</button>" +
+            '<div class="overview__experience">' +
+            '<div class="overview__experience-years">' +
+            item.yearsExperience +
+            "</div>" +
+            " </div>"
+        );
+        $(myOverview).append(element);
+      }
+    </script>
+  </body>
+</html>

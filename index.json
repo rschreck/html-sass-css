@@ -1,0 +1,54 @@
+{
+  "main": {
+    "name": "Renuka Schreck",
+    "position": "Full Stack Developer",
+    "phone": "641-919-5380",
+    "email": "schrer3@gmail.com",
+    "location": "Austin, TX",
+    "extra": "US Citizen",
+    "yearsExperience": "15+ years",
+    "websites": [
+      {
+        "website": "LinkedIn",
+        "url": "https://www.linkedin.com/in/renukaschreck/"
+      },
+      {
+        "website": "GitHub",
+        "url": "https://github.com/rschreck/"
+      },
+      {
+        "website": "Facebook",
+        "url": "https://www.facebook.com/renuka.schreck/"
+      },
+      {
+        "website": "Resume",
+        "url": "./Renuka-Resume.pdf"
+      }
+    ],
+    "intro": [
+      "👋 I am Renuka Schreck, software developer and a meta-fit instructor 💪. I am Interested in a challenging position as a JavaScript full-stack developer.",
+      "I was born in Jabalpur, India. I have 5 older sisters. After graduating High School, I went to Nutan college for Bachelor's degree in Math and then went to MANIT for MCA (Master's In Computer Application). I move to US in 2000 and instead of going to University again, I decided to focus on Certifications and passed two Microsoft certifications.",
+      "My keen interest in programming and design helps me find creative solutions to technical challenges from back-end to front-end and develop solutions. I am writing code for more than 2 decades.",
+      "I live in Austin, TX 🏠 with my hubby Dan and Charlie the 🐕. Our daughter Reva is studying electrical engineering from UTSA.",
+      "I <b>used</b> to be a Microsoft full-stack developer with expertise in C#, ASP.NET, MVC, WPF most of my professional life but few years back, I learned <b>JavaScript, TypeScript, React, Node, GraphQL, AWS</b> and now very comfortable as JS/TS full-stack developer. I have also done a small course on Python"
+    ],
+    "moreIntro": [
+      "11 years back, I started simple exercises like Zumba, then I started doing meta-fit (HITT). Later I became meta-fit instructor. Last year, I ran my first half-marathon.",
+      "I am a vegetarian who loves to cook. I also love my 🍷. I also enjoy long walks with my hubby."
+    ],
+    "skills": [
+      "TypeScript, JavaScript",
+      "React, Node, GraphQL",
+      "HTML, CSS, SASS",
+      "SQL, Oracle, Postgres, MongoDB",
+      "C#, ASP.Net, VB.Net",
+      "AWS S3, Lambda, CDK, Incognito",
+      "Unit Testing, Jest, Chromatic",
+      "JIRA, Confluence, ShortCut",
+      "GitHub, Cli, TFS. SVN",
+      "DevOps with CircleCI",
+      "Design documents, PR feedback",
+      "Mentoring Junior Developers"
+    ]
+  }
+}
