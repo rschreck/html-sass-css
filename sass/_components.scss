@@ -16,7 +16,7 @@
 .experience {
   font-size: 1.4rem;
   padding: 2.5rem;
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-white);
   border-bottom: var(--line);
 
   &__heading {
@@ -43,23 +43,20 @@
     align-items: center;
     margin-bottom: 2rem;
   }
-  &__card__project {
-  }
 }
 
 //Education
 .education {
-  background-color: var(--color-grey-light-1);
+  background-color: var(color-white);
   font-size: 1.4rem;
   padding: 2.5rem;
   border-bottom: var(--line);
 
   &__heading {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 1000;
     text-transform: uppercase;
-
-    padding: 1.5rem 3rem;
+    // padding: 1.5rem 3rem;
 
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
@@ -70,13 +67,14 @@
     padding: 1.5rem 3rem;
   }
   &__card__heading {
+    padding: 1.5rem 1.5rem;
     font-size: 1.25rem;
     font-weight: 500;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     &-position {
       flex: 0 0 33%;
     }
@@ -321,10 +319,11 @@
 }
 
 ////////////////////////////////////////
-// HOTEL OVERVIEW
+// PROFILE OVERVIEW
 .overview {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--color-grey-light-2);
   @media only screen and (max-width: $bp-smallest) {
     display: flex;
@@ -377,7 +376,7 @@
     background-color: #fff;
   }
 
-  &__rating {
+  &__experience {
     background-color: var(--color-primary);
     color: #fff;
     margin-left: 3rem;
@@ -397,22 +396,13 @@
     }
   }
 
-  &__rating-average {
+  &__experience-years {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
 
     @media only screen and (max-width: $bp-small) {
       font-size: 1.8rem;
-    }
-  }
-
-  &__rating-count {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-
-    @media only screen and (max-width: $bp-small) {
-      font-size: 0.5rem;
     }
   }
 }
@@ -596,7 +586,7 @@
     color: var(--color-grey-dark-3);
   }
 
-  &__rating {
+  &__experience {
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300;

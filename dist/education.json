@@ -1,0 +1,48 @@
+{
+  "education": [
+    {
+      "degree": "Master's in Computer Applications",
+      "institute": "MANIT – Regional Engineering College, Bhopal, India",
+      "period": "Aug 1994 - Jun 1997"
+    },
+    {
+      "degree": "Bachelor's in Math",
+      "institute": "Nutan College, Bhopal, India",
+      "period": "Aug 1991 - Jul 1994"
+    }
+  ],
+  "certifications": [
+    {
+      "certificate": "Microsoft Certified professional",
+      "period": "2001"
+    },
+    {
+      "certificate": "IBM FileNet Administration and Maintenance Certification",
+      "period": "2015"
+    },
+    {
+      "certificate": "MVC Certification",
+      "period": "2017"
+    },
+    {
+      "certificate": "Python Essentials",
+      "period": "2018"
+    },
+    {
+      "certificate": "Udemy, Node.Js Unit Testing In Depth",
+      "period": "2018"
+    },
+    {
+      "certificate": "Epic React.IO, Advanced React Hooks ",
+      "period": "2019"
+    },
+    {
+      "certificate": "Udemy, Advanced CSS, FlexBox",
+      "period": "2022"
+    },
+    {
+      "certificate": "Udemy, AWS Lambda and Serverless",
+      "period": "2023"
+    }
+  ]
+}

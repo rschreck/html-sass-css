@@ -3,31 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/rs.jpg" />
-    <title>Renuka Schreck &mdash; Experience</title>
+    <script src='./utils.js' type='module'></script>
     <script src="./jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <img class="icon-rotate logo" src="img/rs.jpg" alt="RS logo" />
-        <nav class="user-nav">
-          <div class="user-nav__user">
-            <img
-              src="img/renuka-2.jpg"
-              alt="user"
-              class="user-nav__user-photo"
-            />
-            <span>R Schreck</span>
-          </div>
-        </nav>
-      </header>
+      <div id="header"></div>
       <div class="content">
         <nav class="sidebar">
           <ul class="side_nav">
@@ -80,196 +67,48 @@
               </a>
             </li>
           </ul>
-          <div class="legal">&copy:2023</div>
+          <div class="legal">&copy RSchreck:2023</div>
         </nav>
-        <main class="hotel-view">
-          <div class="overview">
-            <h1 class="overview__heading">Renuka Schreck</h1>
-            <div class="overview__stars">
-              <h3>Full Stack Developer</h3>
-              <svg class="overview__icon-star">
-                <h3>641-919-5380</h3>
-              </svg>
-              <svg class="overview__icon-copy">
-                <h3 id="emailid">schrer3@gmail.com</h3>
-              </svg>
-              <button
-                class="overview__icon-copy"
-                onclick="navigator.clipboard.writeText('schrer3@gmail.com')"
-              >
-                <svg class="overview__icon-copy" aria-labelledby="circle">
-                  <title id="unique-id">Copy To Clipboard</title>
-                  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>
-                </svg>
-              </button>
-
-              <svg class="overview__icon-star">
-                <h3>US Citizen</h3>
-              </svg>
-            </div>
-            <div class="overview__location">
-              <svg class="overview__icon-location">
-                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <button class="btn-inline">Austin, TX</button>
-            </div>
-            <div class="overview__rating">
-              <div class="overview__rating-average">15+ years</div>
-            </div>
-          </div>
-          <div class="experience" id="experience">
-            <div class="experience__heading">
-              <h4>References</h4>
-              </div>
-              <div class="user-reviews">
-                <figure class="review">
-                  <blockquote class="review__text">
-                    During my time as an intern at Samsung Austin Semiconductor, Renuka was always willing
-                    to guide me as I learned the ropes. Whether we were discussing the technical stack,
-                     the latest technologies, or my intern project, she helped me to grow as a Software Engineer.
-                      She advised me during my intern project even though she wasn't my direct mentor,
-                       and helped me understand important parts of the projects we worked on. She's
-                        clearly very strong technically, and was on top of her projects and the rest of the stack.
-                    I felt very at home having a conversation and sharing coffee with Renuka at the SAS cafeteria.
-                    </blockquote>
-                  <figcaption class="review__user">
-                     
-                      <div class="review__user-box">
-                          <p class="review__rating">Joseph Norman</p>
-                          <p class="review__user-name">SWE at Capital One</p>
-                      </div>
-                      <div class="review__user-name">Feb 15, 2022</div>
-                  </figcaption>
-              </figure>
-                <figure class="review">
-                    <blockquote class="review__text">
-                      I had the pleasure to work with Renuka as part of Innovation team at Samsung Austin Semiconductor
-                      on one of my first web applications that utilized MERN stack.
-                       Renuka did an excellent job of mentoring me through the project.
-                        Her attention to details, ability to think of efficient solutions
-                         to solve complex problems and constant drive for perfection set her apart from anyone else.
-                      I look forward to working with her in future.
-                      </blockquote>
-                    <figcaption class="review__user">
-                       
-                        <div class="review__user-box">
-                            <p class="review__rating">Vaibhav Agarwal</p>
-                            <p class="review__user-name">SDE at Workday</p>
-                        </div>
-                        <div class="review__user-name">Feb 6, 2022</div>
-                    </figcaption>
-                </figure>
-              <figure class="review">
-                <blockquote class="review__text">
-                  Any intern would be lucky to have a mentor on the level of Renuka. I had the pleasure of working
-                   under Renuka at Samsung Austin Semiconductor (SAS) for 2 months, during which I learned how to
-                    manage large-scale databases, develop models for factory processes, and how to better serve
-                     the customer as a software engineer. Above all, I was more than impressed with Renuka's ability
-                      to understand several complex systems and provide solutions for different problems and different
-                       users - her work contributed significantly to the success and efficiency of the Facilities team at SAS.
-                  Renuka is also an extremely patient yet thorough mentor, always willing
-                   to provide input/assistance while allowing others to solve problems without micromanagement.
-                    Her guidance and kindness was one of the reasons I could enjoy work everyday at SAS.
-                     Any future team that requires an experienced and skilled Software Developer
-                      should keep their eye out for Renuka.
-                  </blockquote>
-                <figcaption class="review__user">
-                   
-                    <div class="review__user-box">
-                        <p class="review__rating">Rishabh Nayak</p>
-                        <p class="review__user-name">Software Engineer at Google</p>
-                    </div>
-                    <div class="review__user-name">Feb 6, 2022</div>
-                </figcaption>
-            </figure>
-            <figure class="review">
-              <blockquote class="review__text">
-                Renuka is very easy to work with, very knowledgeable, efficient and creative. When I hired her,
-                 we did not have any other programmers in Facilities so she helped us set up standard languages, programs and processes.
-                 I would relish the opportunity to work with her again, and anyone fortunate enough
-                  to have Renuka on their team will be fortunate indeed!
-                </blockquote>
-              <figcaption class="review__user">
-                 
-                  <div class="review__user-box">
-                      <p class="review__rating">Chris J. Gehlhausen</p>
-                      <p class="review__user-name">Supervisor at Panasonic Energy</p>
-                  </div>
-                  <div class="review__user-name">Jan 6, 2021</div>
-              </figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote class="review__text">
-              Renuka takes time to truly understand problems and create creative and optimized solutions.
-               I was able to work with Renuka to build great solutions for our teams,
-               and was able to get our proprietary systems on site to integrate.
-                She is truly a pleasure to work with
-              </blockquote>
-            <figcaption class="review__user">
-               
-                <div class="review__user-box">
-                    <p class="review__rating">Anthony Syvarth</p>
-                    <p class="review__user-name">Manager at Samsung</p>
-                </div>
-                <div class="review__user-name">Feb 6, 2022</div>
-            </figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote class="review__text">
-            I was Renuka's manager at Xerox for 6 years. It is difficult to find a professional programmer
-             like Renuka who is always is willing to go the extra mile to complete her tasks on schedule and also complete
-              the tasks with the accuracy and attention to detail that Renuka pays to all her tasks. Renuka's work
-               was always of the best quality and she was always looking to widen her technical expertise.
-                Any team that she belongs to will immensely benefit from her technical skills and experience
-                 in a wide array of subjects. She was always offering innovative solutions to seemingly complex problems. 
-              Aside from the technical skills she brought to my team, she was also a great person to work with.
-               She is responsible and reliable. While on my team, she always approached challenges with
-                a great positive attitude. This in turn always motivated the rest of the team and increased the productivity.
-            </blockquote>
-          <figcaption class="review__user">
-             
-              <div class="review__user-box">
-                  <p class="review__rating">Dario Delgado</p>
-                  <p class="review__user-name">Manager at Xerox</p>
-              </div>
-              <div class="review__user-name">Aug 24, 2016</div>
-          </figcaption>
-      </figure>
-      <figure class="review">
-        <blockquote class="review__text">
-          Renuka has a good analytical skills, She's worked on design/implementation and supported
-           several imaging system projects and her programming was very efficient and bug-free.
-            While moving from project to project, she's learned the business and the websites/programs/services very quickly.
-             She's a good team player and collaborates with the other team members.
-           Her personal as well as professional skill are more than enough for any senior position. 
-          </blockquote>
-        <figcaption class="review__user">
-           
-            <div class="review__user-box">
-                <p class="review__rating">Gennady Mamzhi</p>
-                <p class="review__user-name">Team Lead at Xerox</p>
-            </div>
-            <div class="review__user-name">Aug 18, 2016</div>
-        </figcaption>
-    </figure>
-            </div>
-            </div>
+        <main class="main-view">
+          <div id="overviewSection"></div>
+      
+             <div  class="experience" id='myReferences'></div>
           </div>
         </main>
       </div>
     </div>
     <script>
-      function makeItActive(myDIV) {
-        var els = document.getElementsByClassName("side-nav__item");
-        Array.from(els).forEach((el) => {
-          el.classList.remove("activate-menu");
+       fetch('references.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
         });
-        var element = document.getElementById(myDIV);
-        element.classList.add("activate-menu");
-      }
-      $(document).ready(function () {
+    
+    function appendData(data) {
+        let myReferences = document.getElementById("myReferences");
+        $(myReferences).append('<div class="experience__heading">References</div>');
+
+        data.references.forEach(function(item) {
+       var element = $('<div><figure class="review"><blockquote class="review__text">' + item.reviewText + '</blockquote>'
+       + '<figcaption class="review__user"><div class="review__user-box">' 
+       + '<p class="review__experience">' + item.reviewer + '</p>'
+       + '<p class="review__user-name">' + item.reviewerTitle + '</p></div>'
+       + '<div class="review__user-name">' + item.date + '</div></figcaption></figure></div>');
+      $(myReferences).append(element);
+});
+
+  }
+       $(document).ready(function () {
         var element = document.getElementById("references");
         element.classList.add("activate-menu");
+        $("#header").load("header.html");
+        $("#overviewSection").load("overview.html");
+
       });
     </script>
   </body>
