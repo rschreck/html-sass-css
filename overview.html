@@ -1,6 +1,6 @@
 <html>
   <body>
-    <div id="myOverviewSection"></div>
+    <div id="mySubHeader"></div>
     <script>
       var overview;
       fetch("index.json")
@@ -20,7 +20,7 @@
       }
       function appendData(data) {
         var item = data.main;
-        let myOverview = document.getElementById("myOverviewSection");
+        let myOverview = document.getElementById("mySubHeader");
         var element = $(
           '<div class="overview">' +
             '<h1 class="overview__heading">' +
@@ -61,7 +61,7 @@
             "</div>" +
             " </div>"
         );
-        $(myOverview).append(element);
+        $(myOverview).replaceWith(element);
         $(document).ready(function () {
           document.title = item.name;
         });

@@ -1,20 +1,20 @@
 {
   "education": [
     {
-      "degree": "Master's in Computer Applications",
-      "institute": "MANIT – Regional Engineering College, Bhopal, India",
-      "period": "Aug 1994 - Jun 1997"
+      "degree": "Bachelor of Science in Electrical Engineering",
+      "institute": "The University of Texas at San Antonio",
+      "period": "August, 2019 - December, 2023"
     },
     {
-      "degree": "Bachelor's in Math",
-      "institute": "Nutan College, Bhopal, India",
-      "period": "Aug 1991 - Jul 1994"
+      "degree": "High School",
+      "institute": "McNeil High School at Austin,TX",
+      "period": "August, 2016 - May 2019"
     }
   ],
   "certifications": [
     {
-      "certificate": "Microsoft Certified professional",
-      "period": "2001"
+      "certificate": "Academic awards in High School for maintaining a 4.0 GPA",
+      "period": "2019"
     },
     {
       "certificate": "IBM FileNet Administration and Maintenance Certification",

@@ -20,9 +20,10 @@
   border-bottom: var(--line);
 
   &__heading {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-transform: uppercase;
+    color: var(--color-primary);
 
     padding: 1.5rem 3rem;
 
@@ -53,9 +54,10 @@
   border-bottom: var(--line);
 
   &__heading {
-    font-size: 1.25rem;
-    font-weight: 1000;
+    font-size: 1.55rem;
+    font-weight: bold;
     text-transform: uppercase;
+    color: var(--color-primary);
     // padding: 1.5rem 3rem;
 
     @media only screen and (max-width: $bp-small) {
