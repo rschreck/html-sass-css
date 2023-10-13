@@ -154,9 +154,10 @@ body {
   background-color: var(--color-white);
   border-bottom: var(--line); }
   .experience__heading {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-transform: uppercase;
+    color: var(--color-primary);
     padding: 1.5rem 3rem; }
     @media only screen and (max-width: 37.5em) {
       .experience__heading {
@@ -178,9 +179,10 @@ body {
   padding: 2.5rem;
   border-bottom: var(--line); }
   .education__heading {
-    font-size: 1.25rem;
-    font-weight: 1000;
-    text-transform: uppercase; }
+    font-size: 1.55rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-primary); }
     @media only screen and (max-width: 37.5em) {
       .education__heading {
         font-size: 1.8rem;

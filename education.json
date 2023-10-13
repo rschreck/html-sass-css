@@ -1,48 +1,25 @@
 {
   "education": [
     {
-      "degree": "Master's in Computer Applications",
-      "institute": "MANIT – Regional Engineering College, Bhopal, India",
-      "period": "Aug 1994 - Jun 1997"
+      "degree": "Bachelor of Science in Electrical Engineering",
+      "institute": "The University of Texas at San Antonio",
+      "period": "August, 2019 - December, 2023"
     },
     {
-      "degree": "Bachelor's in Math",
-      "institute": "Nutan College, Bhopal, India",
-      "period": "Aug 1991 - Jul 1994"
+      "degree": "High School",
+      "institute": "McNeil High School at Austin,TX",
+      "period": "August, 2016 - May, 2019"
     }
   ],
-  "certifications": [
+  "certifications": [],
+  "awards": [
     {
-      "certificate": "Microsoft Certified professional",
-      "period": "2001"
+      "award": "Academic awards in High School for maintaining a 4.0 GPA",
+      "period": "May, 2019"
     },
     {
-      "certificate": "IBM FileNet Administration and Maintenance Certification",
-      "period": "2015"
-    },
-    {
-      "certificate": "MVC Certification",
-      "period": "2017"
-    },
-    {
-      "certificate": "Python Essentials",
-      "period": "2018"
-    },
-    {
-      "certificate": "Udemy, Node.Js Unit Testing In Depth",
-      "period": "2018"
-    },
-    {
-      "certificate": "Epic React.IO, Advanced React Hooks ",
-      "period": "2019"
-    },
-    {
-      "certificate": "Udemy, Advanced CSS, FlexBox",
-      "period": "2022"
-    },
-    {
-      "certificate": "Udemy, AWS Lambda and Serverless",
-      "period": "2023"
+      "award": "Won 3rd place in college Microcomputer Systems competition for arcade claw machine project",
+      "period": "May, 2022"
     }
   ]
 }
