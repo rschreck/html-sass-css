@@ -70,24 +70,15 @@
           <div class="legal">&copy RSchreck:2023</div>
         </nav>
         <main class="main-view">
-            <div id="overviewSection"></div>
-           <div class="education" id="education">
-            <div class="education__card">
-              <div  id="myEducation"></div>
-            </div>
-            <div class="education" id="education">
-              <div class="education__card">
-                <div id="myCertifications"></div>
-              </div>
-            </div>
-            <div class="education" id="education">
-                <div id="myAwards"></div>
-            </div>
+          <div id="overviewSection"></div>
+      
+             <div  class="experience" id='myReferences'></div>
+          </div>
         </main>
       </div>
     </div>
     <script>
-       fetch('education.json')
+       fetch('references.json')
         .then(function (response) {
             return response.json();
         })
@@ -99,38 +90,26 @@
         });
     
     function appendData(data) {
-        let myEducation = document.getElementById("myEducation");
-        let myCertifications = document.getElementById("myCertifications");
-        let myAwards = document.getElementById("myAwards");
-        $(myEducation).append('<div class="education__heading">Education</div>');
-        data.education.forEach(function(item) {
-       var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.degree + '</h4>'
-       + '<h4 class="education__card__heading-company">' + item.institute + '</h4>'
-       + '<h4 class="education__card__heading-period">' + item.period + '</h4>'+ '</div>');
-      $(myEducation).append(element);
-        });
-        let heading = (data.certifications.length>0)?$('<div class="education__heading">Certifications</div>'):''
-        $(myCertifications).append(heading);
-        data.certifications.forEach(function(item) {
-          var element = $('<div class="education__heading">Certifications<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.certificate + '</h4>'
-            + '<h4 class="education__card__heading-company">' + item.period + '</h4>'+ '</div></div>');
-            $(myCertifications).append(element);
-        });
-        let awardHeading = (data.awards.length>0)?$('<div class="education__heading">Awards</div>'):''
-        $(myAwards).append(awardHeading);
-        data.awards.forEach(function(item) {
-          var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.award + '</h4>'
-          + '<h4 class="education__card__heading-company">' + item.period + '</h4>'+ '</div>');
-          $(myAwards).append(element);
-        });
+        let myReferences = document.getElementById("myReferences");
+        $(myReferences).append('<div class="experience__heading">References</div>');
+
+        data.references.forEach(function(item) {
+       var element = $('<div><figure class="review"><blockquote class="review__text">' + item.reviewText + '</blockquote>'
+       + '<figcaption class="review__user"><div class="review__user-box">' 
+       + '<p class="review__experience">' + item.reviewer + '</p>'
+       + '<p class="review__user-name">' + item.reviewerTitle + '</p></div>'
+       + '<div class="review__user-name">' + item.date + '</div></figcaption></figure></div>');
+      $(myReferences).append(element);
+});
+
   }
        $(document).ready(function () {
-        var element = document.getElementById("education");
+        var element = document.getElementById("references");
         element.classList.add("activate-menu");
         $("#header").load("header.html");
         $("#overviewSection").load("overview.html");
+
       });
-    
     </script>
   </body>
 </html>
