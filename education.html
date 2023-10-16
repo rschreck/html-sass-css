@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo.jpg" />
-    <script src='./utils.js' type='module'></script>
+    <script src="./utils.js" type="module"></script>
     <script src="./jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -70,67 +70,98 @@
           <div class="legal">&copy RSchreck:2023</div>
         </nav>
         <main class="main-view">
-            <div id="overviewSection"></div>
-           <div class="education" id="education">
+          <div id="overviewSection"></div>
+          <div class="education" id="education">
             <div class="education__card">
-              <div  id="myEducation"></div>
+              <div id="myEducation"></div>
             </div>
-            <div class="education" id="education">
+            <div class="education" id="certification">
               <div class="education__card">
                 <div id="myCertifications"></div>
               </div>
             </div>
-            <div class="education" id="education">
-                <div id="myAwards"></div>
+            <div class="education" id="award">
+              <div id="myAwards"></div>
             </div>
+          </div>
         </main>
       </div>
     </div>
     <script>
-       fetch('education.json')
+      fetch("education.json")
         .then(function (response) {
-            return response.json();
+          return response.json();
         })
         .then(function (data) {
-            appendData(data);
+          appendData(data);
         })
         .catch(function (err) {
-            console.log('error: ' + err);
+          console.log("error: " + err);
         });
-    
-    function appendData(data) {
+
+      function appendData(data) {
         let myEducation = document.getElementById("myEducation");
         let myCertifications = document.getElementById("myCertifications");
         let myAwards = document.getElementById("myAwards");
-        $(myEducation).append('<div class="education__heading">Education</div>');
-        data.education.forEach(function(item) {
-       var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.degree + '</h4>'
-       + '<h4 class="education__card__heading-company">' + item.institute + '</h4>'
-       + '<h4 class="education__card__heading-period">' + item.period + '</h4>'+ '</div>');
-      $(myEducation).append(element);
+        $(myEducation).append(
+          '<div class="education__heading">Education</div>'
+        );
+        data.education.forEach(function (item) {
+          var element = $(
+            '<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.degree +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.institute +
+              "</h4>" +
+              '<h4 class="education__card__heading-period">' +
+              item.period +
+              "</h4>" +
+              "</div>"
+          );
+          $(myEducation).append(element);
         });
-        let heading = (data.certifications.length>0)?$('<div class="education__heading">Certifications</div>'):''
+        let heading =
+          data.certifications.length > 0
+            ? $('<div class="education__heading">Certifications</div>')
+            : "";
         $(myCertifications).append(heading);
-        data.certifications.forEach(function(item) {
-          var element = $('<div class="education__heading">Certifications<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.certificate + '</h4>'
-            + '<h4 class="education__card__heading-company">' + item.period + '</h4>'+ '</div></div>');
-            $(myCertifications).append(element);
+        data.certifications.forEach(function (item) {
+          var element = $(
+            '<div class="education__heading">Certifications<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.certificate +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.period +
+              "</h4>" +
+              "</div></div>"
+          );
+          $(myCertifications).append(element);
         });
-        let awardHeading = (data.awards.length>0)?$('<div class="education__heading">Awards</div>'):''
+        let awardHeading =
+          data.awards.length > 0
+            ? $('<div class="education__heading">Awards</div>')
+            : "";
         $(myAwards).append(awardHeading);
-        data.awards.forEach(function(item) {
-          var element = $('<div class="education__card__heading"><h4 class="education__card__heading-position">' + item.award + '</h4>'
-          + '<h4 class="education__card__heading-company">' + item.period + '</h4>'+ '</div>');
+        data.awards.forEach(function (item) {
+          var element = $(
+            '<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.award +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.period +
+              "</h4>" +
+              "</div>"
+          );
           $(myAwards).append(element);
         });
-  }
-       $(document).ready(function () {
-        var element = document.getElementById("education");
-        element.classList.add("activate-menu");
-        $("#header").load("header.html");
-        $("#overviewSection").load("overview.html");
-      });
-    
+        $(document).ready(function () {
+          var element = document.getElementById("education");
+          element.classList.add("activate-menu");
+          $("#header").load("header.html");
+          $("#overviewSection").load("overview.html");
+        });
+      }
     </script>
   </body>
 </html>

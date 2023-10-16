@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo.jpg" />
-    <script src='./utils.js' type='module'></script>
+    <script src="./utils.js" type="module"></script>
     <script src="./jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -72,59 +72,72 @@
         <main class="main-view">
           <div id="overviewSection"></div>
           <div class="experience" id="experience">
-            <div  id="myExperience"></div>
-               </div>
+            <div id="myExperience"></div>
           </div>
         </main>
       </div>
     </div>
     <script>
-         fetch('experience.json')
+      fetch("experience.json")
         .then(function (response) {
-            return response.json();
+          return response.clone().json();
         })
         .then(function (data) {
-            appendData(data);
+          appendData(data);
         })
         .catch(function (err) {
-            console.log('error: ' + err);
+          console.log("error: " + err);
         });
-    
-        function appendData(data) {
+
+      function appendData(data) {
         let myExperience = document.getElementById("myExperience");
-        $(myExperience).append('<div class="experience__heading">Experience</div>');
+        $(myExperience).append(
+          '<div class="experience__heading">Experience</div>'
+        );
 
-        data.experience.forEach(function(item) {
-         
-       var element = $('<div class="experience__card"><div class="experience__card__heading">'
-        +'<h4 class="experience__card__heading-position">' + item.position + '</h4>'
-       + '<h4 class="education__card__heading-company">' + item.company + '</h4>'
-
-       + '<h4 class="education__card__heading-period">' + item.period + '</h4>'+ '</div>'
-       +item.project.map((project)=>{
-                            return ( '<div class="experience__card__project"><b>Project</b>:'+ project.name 
-                              +'<p>'+ project.description +'</p>'
-                              + '</div>')
-                        }).join('')
-     
-       +'<ul class="list">' 
-      +item.skills.map((skill)=>{
-                            return (
-                              '<li class="list__item-experience">'+ skill + '</li>'
-                              )
-                        }).join('')
-     
-       +'</ul>' 
-       + '</div>');
-      $(myExperience).append(element);
-  });
-  }
+        data.experience.forEach(function (item) {
+          var element = $(
+            '<div class="experience__card"><div class="experience__card__heading">' +
+              '<h4 class="experience__card__heading-position">' +
+              item.position +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.company +
+              "</h4>" +
+              '<h4 class="education__card__heading-period">' +
+              item.period +
+              "</h4>" +
+              "</div>" +
+              item.project
+                .map((project) => {
+                  return (
+                    '<div class="experience__card__project"><b>Project</b>:' +
+                    project.name +
+                    "<p>" +
+                    project.description +
+                    "</p>" +
+                    "</div>"
+                  );
+                })
+                .join("") +
+              '<ul class="list">' +
+              item.skills
+                .map((skill) => {
+                  return '<li class="list__item-experience">' + skill + "</li>";
+                })
+                .join("") +
+              "</ul>" +
+              "</div>"
+          );
+          $(myExperience).append(element);
+        });
         $(document).ready(function () {
-        var element = document.getElementById("experience");
-        element.classList.add("activate-menu");
-        $("#header").load("header.html");
-        $("#overviewSection").load("overview.html");
-      });
+          var element = document.getElementById("experience");
+          element.classList.add("activate-menu");
+          $("#header").load("header.html");
+          $("#overviewSection").load("overview.html");
+        });
+      }
     </script>
   </body>
 </html>

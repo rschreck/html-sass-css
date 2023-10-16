@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/logo.jpg" />
-    <script src='./utils.js' type='module'></script>
+    <script src="./utils.js" type="module"></script>
     <script src="./jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
@@ -71,45 +71,53 @@
         </nav>
         <main class="main-view">
           <div id="overviewSection"></div>
-      
-             <div  class="experience" id='myReferences'></div>
-          </div>
+          <div class="experience" id="myReferences"></div>
         </main>
       </div>
     </div>
     <script>
-       fetch('references.json')
+      fetch("references.json")
         .then(function (response) {
-            return response.json();
+          return response.json();
         })
         .then(function (data) {
-            appendData(data);
+          appendData(data);
         })
         .catch(function (err) {
-            console.log('error: ' + err);
+          console.log("error: " + err);
         });
-    
-    function appendData(data) {
+
+      function appendData(data) {
         let myReferences = document.getElementById("myReferences");
-        $(myReferences).append('<div class="experience__heading">References</div>');
+        $(myReferences).append(
+          '<div class="experience__heading">References</div>'
+        );
 
-        data.references.forEach(function(item) {
-       var element = $('<div><figure class="review"><blockquote class="review__text">' + item.reviewText + '</blockquote>'
-       + '<figcaption class="review__user"><div class="review__user-box">' 
-       + '<p class="review__experience">' + item.reviewer + '</p>'
-       + '<p class="review__user-name">' + item.reviewerTitle + '</p></div>'
-       + '<div class="review__user-name">' + item.date + '</div></figcaption></figure></div>');
-      $(myReferences).append(element);
-});
-
-  }
-       $(document).ready(function () {
-        var element = document.getElementById("references");
-        element.classList.add("activate-menu");
-        $("#header").load("header.html");
-        $("#overviewSection").load("overview.html");
-
-      });
+        data.references.forEach(function (item) {
+          var element = $(
+            '<div><figure class="review"><blockquote class="review__text">' +
+              item.reviewText +
+              "</blockquote>" +
+              '<figcaption class="review__user"><div class="review__user-box">' +
+              '<p class="review__experience">' +
+              item.reviewer +
+              "</p>" +
+              '<p class="review__user-name">' +
+              item.reviewerTitle +
+              "</p></div>" +
+              '<div class="review__user-name">' +
+              item.date +
+              "</div></figcaption></figure></div>"
+          );
+          $(myReferences).append(element);
+        });
+        $(document).ready(function () {
+          var element = document.getElementById("references");
+          element.classList.add("activate-menu");
+          $("#header").load("header.html");
+          $("#overviewSection").load("overview.html");
+        });
+      }
     </script>
   </body>
 </html>
