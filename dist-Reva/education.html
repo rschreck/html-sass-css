@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.jpg" />
+    <script src="./utils.js" type="module"></script>
+    <script src="./jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header"></div>
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="side_nav">
+            <li class="side-nav__item" id="home">
+              <a
+                href="./index.html"
+                class="side-nav__link"
+                onclick="makeItActive('home')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                  <span>About Me</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="experience">
+              <a
+                href="experience.html"
+                class="side-nav__link"
+                onclick="makeItActive('experience')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                  <span>Experience</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="education">
+              <a
+                href="education.html"
+                class="side-nav__link"
+                onclick="makeItActive('education')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-key"></use>
+                  <span>Education</span>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item" id="references">
+              <a
+                href="references.html"
+                class="side-nav__link"
+                onclick="makeItActive('references')"
+              >
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                  <span>References</span>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy RSchreck:2023</div>
+        </nav>
+        <main class="main-view">
+          <div id="overviewSection"></div>
+          <div class="education" id="education">
+            <div class="education__card">
+              <div id="myEducation"></div>
+            </div>
+            <div class="education" id="certification">
+              <div class="education__card">
+                <div id="myCertifications"></div>
+              </div>
+            </div>
+            <div class="education" id="award">
+              <div id="myAwards"></div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      fetch("education.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          appendData(data);
+        })
+        .catch(function (err) {
+          console.log("error: " + err);
+        });
+
+      function appendData(data) {
+        let myEducation = document.getElementById("myEducation");
+        let myCertifications = document.getElementById("myCertifications");
+        let myAwards = document.getElementById("myAwards");
+        $(myEducation).append(
+          '<div class="education__heading">Education</div>'
+        );
+        data.education.forEach(function (item) {
+          var element = $(
+            '<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.degree +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.institute +
+              "</h4>" +
+              '<h4 class="education__card__heading-period">' +
+              item.period +
+              "</h4>" +
+              "</div>"
+          );
+          $(myEducation).append(element);
+        });
+        let heading =
+          data.certifications.length > 0
+            ? $('<div class="education__heading">Certifications</div>')
+            : "";
+        $(myCertifications).append(heading);
+        data.certifications.forEach(function (item) {
+          var element = $(
+            '<div class="education__heading">Certifications<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.certificate +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.period +
+              "</h4>" +
+              "</div></div>"
+          );
+          $(myCertifications).append(element);
+        });
+        let awardHeading =
+          data.awards.length > 0
+            ? $('<div class="education__heading">Awards</div>')
+            : "";
+        $(myAwards).append(awardHeading);
+        data.awards.forEach(function (item) {
+          var element = $(
+            '<div class="education__card__heading"><h4 class="education__card__heading-position">' +
+              item.award +
+              "</h4>" +
+              '<h4 class="education__card__heading-company">' +
+              item.period +
+              "</h4>" +
+              "</div>"
+          );
+          $(myAwards).append(element);
+        });
+        $(document).ready(function () {
+          var element = document.getElementById("education");
+          element.classList.add("activate-menu");
+          $("#header").load("header.html");
+          $("#overviewSection").load("overview.html");
+        });
+      }
+    </script>
+  </body>
+</html>

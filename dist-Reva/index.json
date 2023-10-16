@@ -1,0 +1,45 @@
+{
+  "main": {
+    "name": "Reva Kulkarni",
+    "position": "Electrical Engineer",
+    "phone": "512-565-2908",
+    "email": "RevaKulkarni01@gmail.com",
+    "location": "Austin, TX",
+    "extra": "US Citizen",
+    "yearsExperience": "Entry Level",
+    "websites": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/reva-kul13/"
+      },
+      {
+        "name": "Resume",
+        "url": "./Reva-Kulkarni-Resume.pdf"
+      }
+    ],
+    "intros": [
+      "👋 I am Reva Kulkarni, an electrical ⚡ engineer. I am interested in a challenging position as a entry level electrical engineer. ",
+      "My interests include <b>nanotechnology, fiber optics, and circuit design</b>, but I am open-minded about various fields to pursue in my career. I work well within teams to collaborate on projects.",
+      "Since high school I have held positions in retail, education, and the semiconductor industry.",
+      "Enjoy being part of a team, as well and thrive in high-pressure and challenging working environments.",
+      "I am finishing up my college in December, 2023 and currently live in San Antonio, TX.",
+      "Currently, I am working as a Math Tutor for Mathenesium for K-12 grades. I learned a lot from this job including being <b>patient, empathetic and a good listener.</b>. "
+    ],
+    "sideIntros": [
+      "I enjoy long hikes in San Antonio. I love to travel with my parents. I also love our dog Charlie.",
+      "I am a big foodie and enjoy all different cuisines but I love my moms meals the most!"
+    ],
+    "skills": [
+      "PSpice and Multisim",
+      "Bread-boarding",
+      "soldering and circuit building",
+      "C Programming",
+      "Assembly Programming",
+      "HTML/JavaScript",
+      "Microsoft Word",
+      "Excel/PowerPoint",
+      "Korean Language",
+      "French Language"
+    ]
+  }
+}

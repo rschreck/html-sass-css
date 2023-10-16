@@ -1,0 +1,25 @@
+{
+  "education": [
+    {
+      "degree": "Bachelor of Science in Electrical Engineering",
+      "institute": "The University of Texas at San Antonio",
+      "period": "August, 2019 - December, 2023"
+    },
+    {
+      "degree": "High School",
+      "institute": "McNeil High School at Austin,TX",
+      "period": "August, 2016 - May, 2019"
+    }
+  ],
+  "certifications": [],
+  "awards": [
+    {
+      "award": "Academic awards in High School for maintaining a 4.0 GPA",
+      "period": "May, 2019"
+    },
+    {
+      "award": "Won 3rd place in college Microcomputer Systems competition for arcade claw machine project",
+      "period": "May, 2022"
+    }
+  ]
+}

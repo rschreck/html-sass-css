@@ -1,0 +1,71 @@
+<html>
+  <body>
+    <div id="mySubHeader"></div>
+    <script>
+      var overview;
+      fetch("index.json")
+        .then(function (response) {
+          return response.json();
+        })
+
+        .then(function (data) {
+          overview = data;
+          appendData(data);
+        })
+        .catch(function (err) {
+          console.log("error: " + err);
+        });
+      function clickMe() {
+        navigator.clipboard.writeText(overview.main.email);
+      }
+      function appendData(data) {
+        var item = data.main;
+        let myOverview = document.getElementById("mySubHeader");
+        var element = $(
+          '<div class="overview">' +
+            '<h1 class="overview__heading">' +
+            item.name +
+            "</h1>" +
+            '<div class="overview__stars">' +
+            "<h3>" +
+            item.position +
+            "</h3>" +
+            '<svg class="overview__icon-star"></svg>' +
+            "<h3>" +
+            item.phone +
+            "</h3>" +
+            '<svg class="overview__icon-star"></svg>' +
+            "<h3>" +
+            item.email +
+            "</h3>" +
+            '<button class="overview__icon-copy" onclick="clickMe()">' +
+            ' <svg class="overview__icon-copy" aria-labelledby="circle">' +
+            '  <title id="unique-id">Copy To Clipboard</title>' +
+            '  <use xlink:href="img/sprite.svg#icon-copy-to-clipboard"></use>' +
+            "</svg>" +
+            "</button>" +
+            '<svg class="overview__icon-star"></svg>' +
+            "<h3>" +
+            item.extra +
+            "</h3>" +
+            "</div>" +
+            '<div class="overview__location">' +
+            ' <button class="btn-inline">' +
+            item.location +
+            "</button>" +
+            "</div>" +
+            '<div class="overview__experience">' +
+            '<div class="overview__experience-years">' +
+            item.yearsExperience +
+            "</div>" +
+            "</div>" +
+            " </div>"
+        );
+        $(myOverview).replaceWith(element);
+        $(document).ready(function () {
+          document.title = item.name;
+        });
+      }
+    </script>
+  </body>
+</html>
