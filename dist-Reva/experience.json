@@ -1,0 +1,58 @@
+{
+  "experience": [
+    {
+      "position": "Math Tutor",
+      "company": "Mathnasium, San Antonio, TX",
+      "period": "June, 2023 - Present",
+      "skills": [
+        "Tutoring",
+        "Math",
+        "Algebra",
+        "Advanced Math Concepts",
+        "Integration"
+      ],
+      "project": [
+        {
+          "name": "Tutoring",
+          "description": "Teaching children (K-12) math using the Mathnasium Method to learn math concepts to achieve or surpass their grade level."
+        }
+      ]
+    },
+    {
+      "position": "Summer Intern",
+      "company": "Samsung Austin Semiconductors, Austin, TX",
+      "period": "June, 2022 - August, 2022",
+      "skills": [
+        "Standard Operating Procedures(SOP)",
+        "Emergency Power Off(EPO)",
+        "Power Plant Operations",
+        "Confluence",
+        "MS Excel",
+        "MS Word",
+        "MS Power Point"
+      ],
+      "project": [
+        {
+          "name": "Electrical Projects",
+          "description": "Worked with the Equipment team under Facilities Electrical. Completed three projects: digitizing documents, writing Standard Operating Procedures (SOPs) for electrical racking equipment, and installation of Emergency Power Off (EPO) buttons for testing room safety. Continuously learned about power distribution via VFDs, transformers, plant power operations."
+        }
+      ]
+    },
+    {
+      "position": "Cashier",
+      "company": "Mandola's Italian Kitchen",
+      "period": "June, 2021 - August, 2021",
+      "skills": [
+        "Cash Resister Transactions",
+        "Drawer Balancing",
+        "Customer Service"
+      ],
+      "project": [
+        {
+          "name": "Cashier",
+          "description": "Ensured that all guests received a warm greeting at the register. Honored with Employee of the Month Award."
+        }
+      ]
+    }
+  ]
+}

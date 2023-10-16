@@ -1,7 +1,7 @@
 :root {
-  --color-primary: #466658;
-  --color-primary-light: #6b9c86;
-  --color-primary-dark: #5d8775;
+  --color-primary: #348fa4;
+  --color-primary-light: #3f96a9;
+  --color-primary-dark: #297e91;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
@@ -151,13 +151,12 @@ body {
 .experience {
   font-size: 1.4rem;
   padding: 2.5rem;
-  background-color: var(--color-white);
+  background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
   .experience__heading {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 500;
     text-transform: uppercase;
-    color: var(--color-primary);
     padding: 1.5rem 3rem; }
     @media only screen and (max-width: 37.5em) {
       .experience__heading {
@@ -174,15 +173,15 @@ body {
     margin-bottom: 2rem; }
 
 .education {
-  background-color: var(color-white);
+  background-color: var(--color-grey-light-1);
   font-size: 1.4rem;
   padding: 2.5rem;
   border-bottom: var(--line); }
   .education__heading {
-    font-size: 1.55rem;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 500;
     text-transform: uppercase;
-    color: var(--color-primary); }
+    padding: 1.5rem 3rem; }
     @media only screen and (max-width: 37.5em) {
       .education__heading {
         font-size: 1.8rem;
@@ -190,13 +189,12 @@ body {
   .education__card {
     padding: 1.5rem 3rem; }
   .education__card__heading {
-    padding: 1.5rem 1.5rem;
     font-size: 1.25rem;
     font-weight: 500;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .education__card__heading-position {
       flex: 0 0 33%; }
 
@@ -365,7 +363,6 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid var(--color-grey-light-2); }
   @media only screen and (max-width: 31.25em) {
     .overview {
